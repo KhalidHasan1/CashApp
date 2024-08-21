@@ -1,0 +1,671 @@
+    /* -------------- font google --------- */
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+    /* ----------- global ---------------- */
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        scroll-behavior: smooth;
+        font-family: "Poppins",sans-serif;
+        border: none;
+        outline: none;
+    }
+    html{
+        font-size: 62.5%;
+        overflow: hidden;
+    }
+
+    body {
+        background: #07af0f;
+        color: #ffffff;
+    }
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem 9%;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+    .header .logo{
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    #menu-icon{
+        font-size: 3.6rem;
+        color: #ededed;
+        cursor: pointer;
+        display: none;
+    }
+    .header .signup{
+        position: relative;
+        font-size: 2rem;
+        background: #d80c72;
+        color: #ffffff;
+        font-weight: 600;
+        overflow: hidden;
+        display: none;
+        box-shadow: 0 0 10px 5px rgb(5, 219, 184);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        cursor: pointer;
+    }
+
+    /* Sign Up Button Animation */
+        .header .signup span:nth-child(1) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, #3bff3b, #ffffff);
+            animation: animate1 2s linear infinite;
+        }
+        
+        @keyframes animate1 {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
+        .header .signup span:nth-child(2) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 2px;
+            background: linear-gradient(to bottom, #3bff3b,#ffffff);
+            animation: animate2 2s linear infinite;
+            animation-delay: 1s;
+        }
+        @keyframes animate2 {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100%);
+            }
+        }
+        
+        .header .signup span:nth-child(3) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to left, #3bff3b, #ffffff);
+            animation: animate3 2s linear infinite;
+        }
+        
+        @keyframes animate3 {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        
+        .header .signup span:nth-child(4) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 2px;
+            background: linear-gradient(to top, #3bff3b, #ffffff);
+            animation: animate4 2s linear infinite;
+            animation-delay: 1s;
+        }
+        
+        @keyframes animate4 {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+
+    .navbar a{
+        font-size: 2rem;
+        color: #ededed;
+        font-weight: 500;
+        margin-left: 3.5rem;
+    }
+    .navbar .signupBtn{
+        background: white;
+        color: #07af0f;
+        padding: 1rem 3rem;
+        border-radius: 1rem;
+        border: .2rem solid #07af0f;
+        font-weight: 500;
+    }
+    .navbar .signupBtn:hover{
+        cursor: pointer;
+        background: transparent;
+        color: white;
+        border: .2rem solid #ffffff;
+        padding: 1rem 3rem;
+        border-radius: 1rem;
+        font-weight: 500;
+        transition: .3s;
+    }
+    section {
+        min-height: 100vh;
+        padding: 10rem 9% 2rem;
+    }
+    .home{
+        display: flex;
+        align-items: center;
+        padding: 0 9%;
+        background-image: url('../img/phone.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .home h1{
+        font-size: 4.2rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-top: 10rem;
+    }
+    .home-des span{
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+    .body-section .claim{
+        position: relative;
+        font-size: 2.6rem;
+        margin-top: 3rem;
+        background: linear-gradient(-30deg, #3d0b0be1 50%, #2b0808e0 50%);
+        color: #ffffff;
+        font-weight: 600;
+        overflow: hidden;
+        width: 40rem;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        cursor: pointer;
+    }
+    /* Claim Button Border Animation */
+    .body-section .claim span:nth-child(1) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to right, #171618, #3bff3b);
+        animation: animate1 2s linear infinite;
+    }
+    
+    @keyframes animate1 {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+    
+    .body-section .claim span:nth-child(2) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 3px;
+        background: linear-gradient(to bottom, #171618,#3bff3b);
+        animation: animate2 2s linear infinite;
+        animation-delay: 1s;
+    }
+    @keyframes animate2 {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(100%);
+        }
+    }
+    
+    .body-section .claim span:nth-child(3) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to left, #171618, #3bff3b);
+        animation: animate3 2s linear infinite;
+    }
+    
+    @keyframes animate3 {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    
+    .body-section .claim span:nth-child(4) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background: linear-gradient(to top, #171618, #3bff3b);
+        animation: animate4 2s linear infinite;
+        animation-delay: 1s;
+    }
+    
+    @keyframes animate4 {
+        0% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
+    }
+
+    .home .question-new{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home .question-new .question{
+        font-size: 3.5rem;
+        margin-top: 3rem;
+        font-weight: 700;
+        width: 70%;
+    }
+
+    /*Device Responsive*/
+    @media(max-width:1260px){
+        .home{
+            margin-top: 3rem;
+        }
+        .home .body-section{
+            margin-top: 3rem;
+        }
+    }
+
+
+    @media(max-width:768px){
+        .header{
+            background: #07af0f;
+        }
+        .home{
+            margin-top: 4rem;
+        }
+        .home h1{
+            font-size: 3.5rem;
+        }
+        .home .body-section{
+            margin-top: 6rem;
+        }
+        #menu-icon{
+            display: block;
+        }
+        .navbar{
+            position: absolute;
+            top: 100%;
+            left: -100%;
+            width: 100%;
+            padding: 1rem 4%;
+            background: #07af0f;
+            z-index: 1;
+            transition: .25s ease;
+            transition-delay: .25s;
+        }
+        .navbar .signupBtn{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:transparent;
+            color: #07af0f;
+            padding: 1rem 3rem;
+            width: 25%;
+            border-radius: 1rem;
+            border: .2rem solid #07af0f;
+            font-weight: 500;
+        }
+        .navbar.active{
+            left: 0;
+            transition-delay: 0s;
+        }
+        .navbar .active-nav{
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #081b29;
+        
+            z-index: -1;
+            transition: .25s ease;
+            transition-delay: 0s;
+        }
+        .navbar.active .active-nav{
+            left: 0;
+            transition-delay: .25s;
+        }
+        .navbar a{
+            display: block;
+            margin: 3rem 0;
+            font-size: 2rem;
+            transform: translateX(-20rem);
+            transition: .25s ease;
+            transition-delay: 0s;
+        }
+        .navbar.active a{
+            transform: translateX(0);
+            transition-delay: .25s;
+        }
+        .body-section .claim{
+            font-size: 2.5rem;
+        }
+        .body-section .question-new .question{
+            font-size: 2.3rem;
+            text-align: center;
+            background: #ffffff;
+            color: #07af0f;
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+    }
+
+    @media(max-width:716px){
+        .home h1{
+            margin-top: -3rem;
+        }
+        .home .body-section{
+            margin-top: 15rem;
+        }
+        .body-section .question-new .question{
+            font-size: 2.3rem;
+            text-align: center;
+            width: 90%;
+            background: transparent;
+            color: #ffffff;
+        }
+    }
+
+    @media(max-width:610px){
+        .home .body-section{
+            margin-top: 20rem;
+        }
+        .navbar .signupBtn{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:transparent;
+            color: #07af0f;
+            padding: 1rem 3rem;
+            border-radius: 1rem;
+            width: 30%;
+            border: .2rem solid #07af0f;
+            font-weight: 500;
+        }
+
+    }
+
+
+    @media(max-width:508px){
+        .home{
+            margin-top: 3rem;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home h1{
+            font-size: 3rem;
+        }
+        .home .home-des span{
+            font-size:2.2rem;
+        }
+        .navbar .signupBtn{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:transparent;
+            color: #07af0f;
+            padding: 1rem 3rem;
+            border-radius: 1rem;
+            width: 40%;
+            border: .2rem solid #07af0f;
+            font-weight: 500;
+        }
+        
+        .body-section .claim{
+            width: 60%;
+            padding: .5rem 0;
+        }
+        .body-section .question-new .question{
+            font-size: 2rem;
+        }
+
+    }
+
+    @media(max-width:470px){
+        .body-section .claim{
+            width: 70%;
+            margin-top: 1.5rem;
+        }
+    }
+
+    @media(max-width:435px){
+        .header .logo{
+            font-size: 2.8rem;
+        }
+        .header .signup{
+            display: block;
+            font-size: 1.8rem;
+        }
+        #menu-icon{
+            display: none;
+        }
+        .home{
+            margin-top: .5rem;
+        }
+        .home h1{
+            font-size: 2.5rem;
+            margin-top: -5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .home .home-des span{
+            font-size: 1.7rem;
+            font-weight: 600;
+        }
+        .home .body-section{
+            margin-top: 13rem;
+        }   
+        .home .body-section .claim{
+            font-size: 2rem;
+            width: 63%;
+            padding: 1rem 0;
+            margin-top: 3rem;
+        }
+        .home .body-section .question-new .question{
+            font-size: 2rem;
+            font-weight: 600;
+            width: 90%;
+        }
+    }
+
+    @media(max-width:417px){
+        
+        .home .home-des p{
+            font-size: 2.2rem;
+        }
+        .body-section .claim{
+            margin-top: 1rem;
+        }
+    }
+    @media(max-width:401px){
+        .home h1{
+            font-size: 3rem;
+        }
+        .body-section .claim{
+            font-size: 2rem;
+            padding: .6rem 0;
+        }
+        .home .body-section{
+            margin-top:9rem;
+        }
+    }
+    @media(max-width:381px){
+        .navbar .signupBtn{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:transparent;
+            color: #07af0f;
+            padding: 1rem 3rem;
+            border-radius: 1rem;
+            width: 50%;
+            border: .2rem solid #07af0f;
+            font-weight: 500;
+        }
+    }
+
+    @media(max-width:375px){
+        .header .logo{
+            font-size: 2.5rem;
+        }
+        .header .signup{
+            font-size: 1.5rem;
+        }
+        .home h1{
+            margin-top: -1rem;
+            font-size: 2.5rem;
+        }
+        .home .home-des p{
+            font-size: 2rem;
+        }
+       .home .body-section .question-new .question{
+        font-size: 2rem;
+            width: 80%;
+        }
+    }
+    @media(max-width:338px){
+        .home h1{
+            font-size: 2.7rem;
+        }
+        .home .home-des p{
+            font-size: 1.8rem;
+        }
+    }
+
+
+    @media(max-width:320px){
+        .header .logo{
+            font-size: 2.2rem;
+        }
+        .header .signup{
+            font-size: 1.3rem;
+        }
+        .home .body-section .question-new .question{
+            font-size: 2rem;
+            width: 90%;
+        }
+    }
+    @media(max-width:305px){
+        .navbar .signupBtn{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:transparent;
+            color: #07af0f;
+            padding: 1rem 3rem;
+            border-radius: 1rem;
+            width: 70%;
+            border: .2rem solid #07af0f;
+            font-weight: 500;
+        }
+        .home .home-des p{
+            font-size: 1.7rem;
+        }
+    }
+    @media(max-width:300px){
+        .home h1{
+            font-size: 2.5rem;
+            
+        }
+        .home .home-des p{
+            font-size: 1.7rem;
+            
+        }
+    
+    }
+    @media(max-width:288px){
+        .home h1{
+            font-size: 2.4rem;
+        }
+        .home .home-des p{
+            font-size: 1.5rem;
+        }
+        .header .logo{
+            font-size: 2.5rem;
+        }
+        #menu-icon{
+            font-size: 3rem;
+        }
+    }
+    @media(max-width:258px){
+        .home h1{
+            font-size: 2.2rem;
+        }
+        .home .home-des p{
+            font-size: 1.3rem;
+        }
+    }
+    @media(max-width:237px){
+        .home h1{
+            font-size: 2rem;
+            text-align: center;
+        }
+        .home .home-des p{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .header .logo{
+            font-size: 2rem;
+        }
+        #menu-icon{
+            font-size: 2.5rem;
+        }
+    }
+    @media(max-width:218px){
+        .navbar .signupBtn{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:transparent;
+            color: #07af0f;
+            padding:.5rem 1.5rem;
+            border-radius: 1rem;
+            width: 80%;
+            border: .2rem solid #07af0f;
+            font-weight: 500;
+        }
+    }
+    @media(max-width:216px){
+        .home h1{
+            font-size: 1.8rem;
+        }
+    }
